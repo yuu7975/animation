@@ -1,0 +1,85 @@
+.box {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    background-color: #000;
+}
+
+.box:hover {
+    background: #ccc;
+    width: 300px;
+}
+
+.box-02 {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    background-color: #000;
+}
+
+.box-02:hover {
+    transform: translateX(300px);
+    background: #ccc;
+}
+
+.box-03 {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    background-color: #000;
+    animation: rotation 2s ease 0s 1 alternate none running;
+}
+/*
+.box {
+  width: 100px;
+  height: 100px;
+  background: #000;
+  animation-name: rotation; 要素に適応するキーフレームアニメーションを指定
+  animation-duration: 2s; アニメーション開始から終了までの時間を指定
+  animation-timing-function: ease; アニメーションのイージングを指定
+  animation-delay: 0s; アニメーション開始までの遅延時間を指定
+  animation-iteration-count: 1; アニメーションのループ回数を指定
+                                infiniteを指定で無限
+  animation-direction: alternate; アニメーションの再生方向を指定
+  animation-fill-mode: none; キーフレームアニメーションで指定したプロパティを開始前、終了後に適用させるか
+  animation-play-state: running; アニメーションを再生中か一時停止する
+}
+*/
+
+.box-04 {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    background-color: #000;
+    animation: rotation 2s ease 0s infinite alternate none running;
+}
+
+.box-05 {
+    width: 100px;
+    height: 100px;
+    background-color: #000;
+    -webkit-transition: all 300ms 0s ease;
+    transition: all 300ms 0s ease;
+}
+
+.box-05:hover {
+    background: #ccc;
+    width: 300px;
+}
+
+
+@keyframes rotation {
+    0% {
+        transform: scale(.3);
+    }
+
+    50% {
+        transform: scale(.6) rotate(-45deg);
+        background-color: #422;
+    }
+
+    100% {
+        transform: scale(1) rotate(180deg);
+        background-color: #224;
+    }
+}
