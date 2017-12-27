@@ -1,3 +1,18 @@
+body {
+    animation: fadeIn 2s ease 0s 1 normal;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
 .box {
     width: 100px;
     height: 100px;
@@ -58,6 +73,7 @@
     width: 100px;
     height: 100px;
     background-color: #000;
+    margin-bottom: 10px;
     -webkit-transition: all 300ms 0s ease;
     transition: all 300ms 0s ease;
 }
